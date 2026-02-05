@@ -1,1 +1,5 @@
-theme: jekyll-theme-chirpy
+title: Your Name
+description: Computer Science student | Software Development
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-include-cache

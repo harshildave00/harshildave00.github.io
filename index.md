@@ -3,6 +3,11 @@ layout: default
 title: Home
 ---
 
+<!-- Dark/Light Toggle -->
+<div class="theme-toggle">
+  <button id="theme-btn">Toggle Dark/Light</button>
+</div>
+
 <!-- Navigation -->
 <nav class="main-nav">
   <a href="#home">Home</a>
@@ -29,8 +34,8 @@ title: Home
   <h2>About Me</h2>
   <p>
     I’m a Data Science student at UNC Chapel Hill, passionate about software development, AI, and data analytics.
-    My experiences in internships, research, and leadership have equipped me with problem-solving skills,
-    teamwork, and the ability to deliver impactful projects.
+    My experiences in internships, research, and leadership equip me with problem-solving skills, teamwork,
+    and the ability to deliver impactful projects.
   </p>
 </section>
 
@@ -73,8 +78,8 @@ title: Home
   <h2>Projects</h2>
   <div class="cards-container">
     <div class="item">
-      <strong>Interactive Dashboard</strong>
-      <p>Built an interactive dashboard displaying reviews for British Airways. <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau</a></p>
+      <strong>Portfolio Website</strong>
+      <p>Built with Jekyll and GitHub Pages. <a href="https://github.com/harshildave00">GitHub</a></p>
     </div>
     <div class="item">
       <strong>Data Analysis Tool</strong>
@@ -97,11 +102,11 @@ title: Home
   </ul>
 </section>
 
-<!-- Active tab highlighting -->
+<!-- Scripts -->
 <script>
+/* Scroll spy for active nav links */
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".main-nav a");
-
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach(section => {
@@ -114,7 +119,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* Fade-in animation */
+/* Fade-in animation on scroll */
 const faders = document.querySelectorAll('section');
 const appearOptions = { threshold: 0.1 };
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
@@ -125,4 +130,10 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
   });
 }, appearOptions);
 faders.forEach(section => appearOnScroll.observe(section));
+
+/* Dark/Light mode toggle */
+const themeBtn = document.getElementById("theme-btn");
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
 </script>

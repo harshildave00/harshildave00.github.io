@@ -81,10 +81,10 @@ title: Home
   <h2>Projects</h2>
 
   <div class="item">
-    <strong>Portfolio Website</strong>
+    <strong>Interactive Dashboard using Tableau</strong>
     <p>
-      Personal portfolio website built with Jekyll and GitHub Pages. 
-      <a href="https://github.com/harshildave00">GitHub</a>
+      Interactive dashboard designed to analyze British airways. 
+      <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau Link</a>
     </p>
   </div>
 

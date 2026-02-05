@@ -1,5 +1,3 @@
-# harshildave00.github.io
-Harshil Dave Portfolio
 # Harshil Dave
 
 Data Science student interested in software development and data.

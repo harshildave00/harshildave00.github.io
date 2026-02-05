@@ -16,7 +16,7 @@ title: Home
 <!-- Hero / Home Section -->
 <section id="home" class="hero fade-in">
   <div class="hero-content">
-    <img src="assets/images/profile.jpg" alt="Harshil Dave" class="profile-img">
+    <img src="assets/css/1769158361390.jpg" alt="Harshil Dave" class="profile-img">
     <h1>Hi, I’m Harshil Dave</h1>
     <p class="hero-sub">Data Science Student | Software Developer | AI Enthusiast</p>
     <p><a href="assets/HarshilDave_Resume.pdf" class="btn">Download Resume</a></p>

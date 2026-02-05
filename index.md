@@ -3,11 +3,6 @@ layout: default
 title: Home
 ---
 
-<!-- Dark/Light Toggle -->
-<div class="theme-toggle">
-  <button id="theme-btn">Toggle Dark/Light</button>
-</div>
-
 <!-- Navigation -->
 <nav class="main-nav">
   <a href="#home">Home</a>
@@ -43,17 +38,17 @@ title: Home
 <section id="experience" class="fade-in">
   <h2>Experience</h2>
   <div class="cards-container">
-    <div class="item">
+    <div class="item fade-card">
       <strong>Data Science Intern – Sports Media, Severance, CO</strong>
       <span class="muted">June 2025 – Jan 2026</span>
       <p>Assisted with market research, trend analysis, social media campaigns, and digital marketing strategies.</p>
     </div>
-    <div class="item">
+    <div class="item fade-card">
       <strong>Data Analyst – UNC Women’s Tennis</strong>
       <span class="muted">Oct 2025 – Present</span>
       <p>Tracked performance statistics, tagged match film, and built dashboards for coaching staff.</p>
     </div>
-    <div class="item">
+    <div class="item fade-card">
       <strong>Lead Instructional Assistant – UNC Charlotte</strong>
       <span class="muted">Aug 2023 – Jun 2024</span>
       <p>Delivered interactive lessons, mentored 50+ students, and improved grading efficiency by 40%.</p>
@@ -65,7 +60,7 @@ title: Home
 <section id="leadership" class="fade-in">
   <h2>Leadership</h2>
   <div class="cards-container">
-    <div class="item">
+    <div class="item fade-card">
       <strong>Chairman & Business Lead – InspireNC, Raleigh NC</strong>
       <span class="muted">Oct 2020 – Aug 2023</span>
       <p>Secured $15,000+ in grants, organized 10+ community events, and promoted STEAM education to 300+ students.</p>
@@ -77,15 +72,15 @@ title: Home
 <section id="projects" class="fade-in">
   <h2>Projects</h2>
   <div class="cards-container">
-    <div class="item">
+    <div class="item fade-card">
       <strong>Portfolio Website</strong>
       <p>Built with Jekyll and GitHub Pages. <a href="https://github.com/harshildave00">GitHub</a></p>
     </div>
-    <div class="item">
+    <div class="item fade-card">
       <strong>Data Analysis Tool</strong>
       <p>Python tool to analyze & visualize large datasets; improved processing speed by 30%.</p>
     </div>
-    <div class="item">
+    <div class="item fade-card">
       <strong>Project Portfolio</strong>
       <p><a href="https://opal.ils.unc.edu/~hmdave/">Live portfolio of academic and personal projects</a></p>
     </div>
@@ -119,21 +114,15 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* Fade-in animation on scroll */
-const faders = document.querySelectorAll('section');
+/* Fade-in animation on scroll for sections and cards */
+const faders = document.querySelectorAll('.fade-in, .fade-card');
 const appearOptions = { threshold: 0.1 };
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.classList.add('fade-in');
+    entry.target.classList.add('fade-show');
     appearOnScroll.unobserve(entry.target);
   });
 }, appearOptions);
-faders.forEach(section => appearOnScroll.observe(section));
-
-/* Dark/Light mode toggle */
-const themeBtn = document.getElementById("theme-btn");
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
+faders.forEach(el => appearOnScroll.observe(el));
 </script>

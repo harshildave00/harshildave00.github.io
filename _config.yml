@@ -1,2 +1,8 @@
-theme: jekyll-theme-minimal
+title: Harshil Dave
+description: Computer Science Student | Software Development
+
+remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: dark
+
+plugins:
+  - jekyll-include-cache

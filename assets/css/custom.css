@@ -7,36 +7,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
 }
-
-/* DARK MODE */
-body.dark-mode {
-  background-color: #121212;
-  color: #eee;
-}
-body.dark-mode .item { background-color: #1e1e1e; }
-body.dark-mode .main-nav a { color: #eee; }
-body.dark-mode .main-nav a.active, body.dark-mode .main-nav a:hover { color: #00a676; }
-body.dark-mode .btn { background-color: #00a676; }
-
-/* THEME TOGGLE BUTTON */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 200;
-}
-.theme-toggle button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #00a676;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 500;
-}
-.theme-toggle button:hover { background-color: #008f5b; }
 
 /* NAVIGATION */
 .main-nav {
@@ -109,7 +80,9 @@ section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s, transform 0.6s;
+  opacity: 0;
+  transform: translateY(30px);
 }
 .item:hover {
   transform: translateY(-4px);
@@ -121,8 +94,11 @@ section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
 .skills-list { list-style: none; padding-left: 0; }
 .skills-list li { margin-bottom: 0.5rem; }
 
-/* FADE-IN ANIMATION */
-.fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+/* Fade-in Animations */
+.fade-show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
 
 /* MOBILE RESPONSIVE */
 @media screen and (max-width: 768px) {

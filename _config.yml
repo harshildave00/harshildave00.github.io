@@ -6,3 +6,5 @@ minimal_mistakes_skin: dark
 
 plugins:
   - jekyll-include-cache
+custom_css:
+  - assets/css/custom.css

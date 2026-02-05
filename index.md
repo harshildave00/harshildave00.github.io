@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 
-<!-- Navigation -->
 <nav class="main-nav">
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -12,108 +11,84 @@ title: Home
   <a href="#skills">Skills</a>
 </nav>
 
-<!-- Home / Hero Section -->
 <section id="home" class="hero">
-  <img src="assets/images/profile.jpg" alt="Harshil Dave" class="profile-img">
-  <h1>Hi, I’m Harshil Dave</h1>
-  <p class="hero-sub">Data Science Student | Software Development | AI Enthusiast</p>
-  <p><a href="assets/HarshilDave_Resume.pdf" class="btn">Download Resume</a></p>
-  <p>Chapel Hill, NC | <a href="mailto:hmdave@unc.edu">hmdave@unc.edu</a> | +1-919-656-1121</p>
+  <div class="hero-content">
+    <img src="assets/images/profile.jpg" alt="Harshil Dave" class="profile-img">
+    <h1>Hi, I’m Harshil Dave</h1>
+    <p class="hero-sub">Data Science Student | Software Developer | AI Enthusiast</p>
+    <p><a href="assets/HarshilDave_Resume.pdf" class="btn">Download Resume</a></p>
+    <p class="contact-info">Chapel Hill, NC | <a href="mailto:hmdave@unc.edu">hmdave@unc.edu</a> | +1-919-656-1121</p>
+  </div>
 </section>
 
-<!-- About Section -->
-<section id="about">
+<section id="about" class="fade-in">
   <h2>About Me</h2>
   <p>
-    I’m a Data Science student at the University of North Carolina at Chapel Hill, passionate about software development,
-    AI, and data analysis. My experiences in research, internships, and leadership have equipped me with problem-solving skills,
-    teamwork, and the ability to deliver impactful projects.
+    I’m a Data Science student at UNC Chapel Hill, passionate about software development, AI, and data analytics.
+    My experience in internships, research, and leadership equips me with problem-solving skills, teamwork,
+    and the ability to deliver impactful projects.
   </p>
 </section>
 
-<!-- Experience Section -->
-<section id="experience">
+<section id="experience" class="fade-in">
   <h2>Experience</h2>
-
-  <div class="item">
-    <strong>Data Science Intern – Sports Media, Severance, CO</strong><br>
-    <span class="muted">June 2025 – January 2026</span>
-    <p>
-      Assisted with market research, trend analysis, and data collection. Supported social media campaigns
-      and collaborated with teams to improve campaign performance.
-    </p>
-  </div>
-
-  <div class="item">
-    <strong>Data Analyst – UNC Women’s Tennis</strong><br>
-    <span class="muted">October 2025 – Present</span>
-    <p>
-      Tracked performance statistics, rewatched match film with metadata tagging, and built dashboards
-      for coaching staff to optimize performance.
-    </p>
-  </div>
-
-  <div class="item">
-    <strong>Lead Instructional Assistant – UNC Charlotte</strong><br>
-    <span class="muted">August 2023 – June 2024</span>
-    <p>
-      Delivered 75+ interactive lesson plans, mentored 50+ students, and improved grading efficiency by 40%
-      managing a team of 5 TAs.
-    </p>
+  <div class="cards-container">
+    <div class="item">
+      <strong>Data Science Intern – Sports Media</strong>
+      <span class="muted">June 2025 – Jan 2026</span>
+      <p>Assisted with market research, trend analysis, social media campaigns, and digital marketing strategies.</p>
+    </div>
+    <div class="item">
+      <strong>Data Analyst – UNC Women’s Tennis</strong>
+      <span class="muted">Oct 2025 – Present</span>
+      <p>Tracked performance statistics, tagged match film, and built dashboards for coaching staff.</p>
+    </div>
+    <div class="item">
+      <strong>Lead Instructional Assistant – UNC Charlotte</strong>
+      <span class="muted">Aug 2023 – Jun 2024</span>
+      <p>Delivered interactive lessons, mentored students, and improved grading efficiency by 40%.</p>
+    </div>
   </div>
 </section>
 
-<!-- Leadership Section -->
-<section id="leadership">
+<section id="leadership" class="fade-in">
   <h2>Leadership</h2>
-
-  <div class="item">
-    <strong>Chairman & Business Lead – InspireNC, Raleigh NC</strong><br>
-    <span class="muted">October 2020 – August 2023</span>
-    <p>
-      Secured $15,000+ in grants, organized 10+ STEAM events for 300+ students, and promoted robotics initiatives.
-    </p>
+  <div class="cards-container">
+    <div class="item">
+      <strong>Chairman & Business Lead – InspireNC</strong>
+      <span class="muted">Oct 2020 – Aug 2023</span>
+      <p>Secured $15,000+ in grants, organized 10+ community events, and promoted STEAM education to 300+ students.</p>
+    </div>
   </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects">
+<section id="projects" class="fade-in">
   <h2>Projects</h2>
-
-  <div class="item">
-    <strong>Interactive Dashboard using Tableau</strong>
-    <p>
-      Interactive dashboard designed to analyze British airways. 
-      <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau Link</a>
-    </p>
-  </div>
-
-  <div class="item">
-    <strong>Data Analysis Tool</strong>
-    <p>
-      Python tool for analyzing and visualizing large datasets, improving processing speed by 30%.
-    </p>
-  </div>
-
-  <div class="item">
-    <strong>Project Portfolio</strong>
-    <p>
-      <a href="https://opal.ils.unc.edu/~hmdave/">Live portfolio of academic and personal projects</a>
-    </p>
+  <div class="cards-container">
+    <div class="item">
+      <strong>Interactive Dashboard<strong>
+      <p>Built an interactive dashboard displaying reviews for British Airways.<a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau</a></p>
+    </div>
+    <div class="item">
+      <strong>Data Analysis Tool</strong>
+      <p>Python tool to analyze & visualize large datasets; improved processing speed by 30%.</p>
+    </div>
+    <div class="item">
+      <strong>Project Portfolio</strong>
+      <p><a href="https://opal.ils.unc.edu/~hmdave/">Live portfolio of academic and personal projects</a></p>
+    </div>
   </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills">
+<section id="skills" class="fade-in">
   <h2>Skills & Certifications</h2>
-  <ul>
-    <li>Programming: Python | Java | HTML | R | SAS | SQL</li>
-    <li>Data Tools: Pivot Tables, Charts, MS SQL Server</li>
-    <li>Certifications: MTA Python | Microsoft Office Specialist | Adobe Certified Professional (Photoshop, Illustrator, Graphic Design)</li>
+  <ul class="skills-list">
+    <li>Python | Java | HTML | R | SAS | SQL</li>
+    <li>Pivot Tables, Charts, MS SQL Server</li>
+    <li>MTA Python | Microsoft Office Specialist | Adobe Certified Professional (Photoshop, Illustrator, Graphic Design)</li>
   </ul>
 </section>
 
-<!-- Active tab script -->
 <script>
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".main-nav a");
@@ -121,15 +96,12 @@ const navLinks = document.querySelectorAll(".main-nav a");
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80;
+    const sectionTop = section.offsetTop - 100;
     if (scrollY >= sectionTop) current = section.getAttribute("id");
   });
-
   navLinks.forEach(link => {
     link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
+    if (link.getAttribute("href") === "#" + current) link.classList.add("active");
   });
 });
 </script>

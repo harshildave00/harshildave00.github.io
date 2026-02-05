@@ -34,3 +34,19 @@ section {
   opacity: 0.7;
   font-size: 0.9rem;
 }
+
+/* Sticky nav */
+.main-nav {
+  position: sticky;
+  top: 0;
+  background-color: inherit; /* keeps your theme color */
+  padding: 1rem 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+

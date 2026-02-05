@@ -11,32 +11,43 @@ title: Home
 </nav>
 
 <section id="home" class="hero">
-  <h1>Hi! ✨</h1>
-  <h2>I'm Harshil Dave</h2>
-  <p>Computer Science Student | Developer</p>
+  <h1>Hi, I’m Harshil Dave</h1>
+  <p class="hero-sub">
+    Computer Science Student | Software Development
+  </p>
 </section>
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <p>
     I’m a Computer Science student interested in software development,
-    systems, and data. You can tweak this bio however you want!
+    systems, and data. I enjoy building clean, efficient projects and
+    learning how systems work under the hood.
   </p>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
-  <ul class="experience-list">
-    <li><strong>Role — Company</strong>, Date Range</li>
-    <li><strong>Another Role — Another Company</strong>, Date Range</li>
-    <!-- Add more here -->
-  </ul>
+
+  <div class="item">
+    <strong>Role – Company</strong><br>
+    <span class="muted">Month Year – Month Year</span>
+    <p>
+      Brief description of what you worked on, technologies used,
+      and impact.
+    </p>
+  </div>
+
+  <div class="item">
+    <strong>Another Role – Company</strong><br>
+    <span class="muted">Month Year – Month Year</span>
+    <p>
+      Another short description.
+    </p>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-  <ul class="project-list">
-    <li><strong>Project Name</strong> — short summary + <a href="https://github.com/yourrepo">Demo / Repo</a></li>
-    <!-- Add more here -->
-  </ul>
-</section>
+
+  <div class

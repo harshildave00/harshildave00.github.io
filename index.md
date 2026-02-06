@@ -16,7 +16,6 @@ title: Home
 <!-- Hero / Home Section -->
 <section id="home" class="hero fade-in">
   <div class="hero-content">
-    <img src="assets/css/1769158361390.jpg" alt="Harshil Dave" class="profile-img">
     <h1>Hi, I’m Harshil Dave</h1>
     <p class="hero-sub">Data Science Student | Software Developer | AI Enthusiast</p>
     <p><a href="assets/HarshilDave_Resume.pdf" class="btn">Download Resume</a></p>
@@ -76,14 +75,6 @@ title: Home
       <strong>Portfolio Website</strong>
       <p>Built with Jekyll and GitHub Pages. <a href="https://github.com/harshildave00">GitHub</a></p>
     </div>
-    <div class="item fade-card">
-      <strong>Data Analysis Tool</strong>
-      <p>Python tool to analyze & visualize large datasets; improved processing speed by 30%.</p>
-    </div>
-    <div class="item fade-card">
-      <strong>Project Portfolio</strong>
-      <p><a href="https://opal.ils.unc.edu/~hmdave/">Live portfolio of academic and personal projects</a></p>
-    </div>
   </div>
 </section>
 
@@ -125,4 +116,17 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
   });
 }, appearOptions);
 faders.forEach(el => appearOnScroll.observe(el));
+
+/* Section heading color accent on scroll */
+const headings = document.querySelectorAll('section h2');
+const headingObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.color = '#00a676';
+    } else {
+      entry.target.style.color = '';
+    }
+  });
+}, { threshold: 0.3 });
+headings.forEach(h => headingObserver.observe(h));
 </script>

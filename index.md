@@ -72,8 +72,8 @@ title: Home
   <h2>Projects</h2>
   <div class="cards-container">
     <div class="item fade-card">
-      <strong>Portfolio Website</strong>
-      <p>Built with Jekyll and GitHub Pages. <a href="https://github.com/harshildave00">GitHub</a></p>
+      <strong>Interactive Dashboard</strong>
+      <p>Build an interactive dashboard that displays reviews for British airways. <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau</a></p>
     </div>
   </div>
 </section>

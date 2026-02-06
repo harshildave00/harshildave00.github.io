@@ -18,7 +18,7 @@ title: Home
   <div class="hero-content">
     <h1>Hi, I’m Harshil Dave</h1>
     <p class="hero-sub">Data Science Student | Software Developer | AI Enthusiast</p>
-    <p><a href="assets/HarshilDave_Resume.pdf" class="btn">Download Resume</a></p>
+    <p><a href="ResumeHarshil.docx - Google Docs.pdf" class="btn">Download Resume</a></p>
     <p class="contact-info">Chapel Hill, NC | <a href="mailto:hmdave@unc.edu">hmdave@unc.edu</a> | +1-919-656-1121</p>
   </div>
 </section>

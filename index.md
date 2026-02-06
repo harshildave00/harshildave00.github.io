@@ -73,7 +73,7 @@ title: Home
   <div class="cards-container">
     <div class="item fade-card">
       <strong>Interactive Dashboard</strong>
-      <p>Build an interactive dashboard that displays reviews for British airways. <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau</a></p>
+      <p>Built an interactive dashboard that displays reviews for British airways. <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">Tableau</a></p>
     </div>
   </div>
 </section>

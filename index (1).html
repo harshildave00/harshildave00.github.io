@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshil Dave</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a18;
+    --ink2: #3d3d38;
+    --muted: #8a8a82;
+    --subtle: #c8c8c0;
+    --rule: #e4e4dc;
+    --bg: #fafaf6;
+    --card: #ffffff;
+    --accent: #c4531a;
+    --accent2: #2a6b5e;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .site-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Nav */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.18s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(52px, 7vw, 80px);
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    color: var(--ink);
+  }
+
+  .hero-name span {
+    display: block;
+    color: var(--accent2);
+  }
+
+  .hero-bio {
+    font-size: 17px;
+    color: var(--ink2);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 32px;
+  }
+
+  .hero-meta-item {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-meta-item::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 1px;
+    background: var(--subtle);
+    flex-shrink: 0;
+  }
+
+  .hero-meta-item a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .hero-meta-item a:hover { color: var(--ink); border-color: var(--subtle); }
+
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 22px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.18s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: var(--accent); }
+
+  .btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+  .btn-outline:hover { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+  /* Sections */
+  .section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
+  .section:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* Experience */
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0 40px;
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .exp-item:first-child { border-top: none; padding-top: 0; }
+
+  .exp-date { font-size: 12px; color: var(--muted); padding-top: 3px; line-height: 1.5; }
+
+  .exp-role {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 3px;
+  }
+
+  .exp-company {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .exp-desc { font-size: 14px; color: var(--ink2); line-height: 1.65; max-width: 520px; }
+
+  /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .project-card {
+    background: var(--card);
+    padding: 32px;
+    border: 1px solid var(--rule);
+    transition: border-color 0.2s;
+  }
+
+  .project-card:hover { border-color: var(--ink); }
+  .project-card:hover .project-arrow { transform: translate(3px, -3px); }
+
+  .project-num { font-family: var(--serif); font-size: 13px; color: var(--subtle); margin-bottom: 20px; display: block; }
+
+  .project-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+
+  .project-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    border: 1px solid currentColor;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+
+  .project-link {
+    display: inline-flex;
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: border-color 0.15s;
+  }
+
+  .project-link:hover { border-color: var(--ink); }
+  .project-arrow { transition: transform 0.2s; display: inline-block; }
+
+  /* Skills */
+  .skills-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px 48px;
+  }
+
+  .skill-group-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+
+  .skill-pill {
+    font-size: 13px;
+    color: var(--ink2);
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 4px 12px;
+    border-radius: 2px;
+    transition: all 0.15s;
+  }
+
+  .skill-pill:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .cert-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+  .cert-list li {
+    font-size: 13px;
+    color: var(--ink2);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .cert-list li::before { content: '—'; position: absolute; left: 0; color: var(--subtle); }
+
+  /* Contact / Footer */
+  .footer-section {
+    padding: 64px 0 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .footer-headline {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+  }
+
+  .footer-headline em { font-style: normal; color: var(--accent); }
+
+  .contact-links { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+
+  .contact-row { display: flex; align-items: center; gap: 14px; font-size: 14px; }
+
+  .contact-type {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    width: 70px;
+    flex-shrink: 0;
+  }
+
+  .contact-val {
+    color: var(--ink2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .contact-val:hover { color: var(--ink); border-color: var(--ink); }
+
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+  .d1 { animation-delay: 0.05s; }
+  .d2 { animation-delay: 0.15s; }
+  .d3 { animation-delay: 0.25s; }
+  .d4 { animation-delay: 0.38s; }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .site-wrap { padding: 0 20px; }
+    nav { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .nav-links { gap: 20px; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 52px 0 48px; }
+    .exp-item { grid-template-columns: 1fr; gap: 6px; }
+    .project-grid { grid-template-columns: 1fr; }
+    .skills-layout { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .footer-section { grid-template-columns: 1fr; gap: 36px; }
+    .site-footer { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <nav class="fade-up d1">
+    <a href="#" class="nav-logo">Harshil Dave</a>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="fade-up d2">
+      <div class="hero-eyebrow">Data Science · UNC Chapel Hill</div>
+      <h1 class="hero-name">Harshil<span>Dave.</span></h1>
+    </div>
+    <div class="fade-up d3">
+      <p class="hero-bio">Data Science student passionate about software development, AI, and analytics — turning complex data into clear, impactful decisions.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">Chapel Hill, NC</div>
+        <div class="hero-meta-item"><a href="mailto:hmdave@unc.edu">hmdave@unc.edu</a></div>
+        <div class="hero-meta-item">+1 919-656-1121</div>
+      </div>
+      <div class="hero-actions">
+        <a href="https://harshildave00.github.io/ResumeHarshil.docx%20-%20Google%20Docs.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up d4" id="experience">
+    <div class="section-label">Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-date">Jun 2025 – Jan 2026</div>
+      <div>
+        <div class="exp-role">Data Science Intern</div>
+        <div class="exp-company">Sports Media · Severance, CO</div>
+        <p class="exp-desc">Assisted with market research, trend analysis, social media campaigns, and digital marketing strategies.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Oct 2025 – Present</div>
+      <div>
+        <div class="exp-role">Data Analyst</div>
+        <div class="exp-company">UNC Women's Tennis</div>
+        <p class="exp-desc">Tracked performance statistics, tagged match film, and built dashboards for the coaching staff.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Aug 2023 – Jun 2024</div>
+      <div>
+        <div class="exp-role">Lead Instructional Assistant</div>
+        <div class="exp-company">UNC Charlotte</div>
+        <p class="exp-desc">Delivered interactive lessons, mentored 50+ students, and improved grading efficiency by 40%.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">Oct 2020 – Aug 2023</div>
+      <div>
+        <div class="exp-role">Chairman &amp; Business Lead</div>
+        <div class="exp-company">InspireNC · Raleigh, NC</div>
+        <p class="exp-desc">Secured $15,000+ in grants, organized 10+ community events, and promoted STEAM education to 300+ students.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up d4" id="projects">
+    <div class="section-label">Projects</div>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <span class="project-num">01</span>
+        <div class="project-title">British Airways Review Dashboard</div>
+        <p class="project-desc">An interactive Tableau dashboard visualizing customer review data for British Airways — filterable by route, seat type, and traveler category.</p>
+        <span class="project-tag">Tableau</span>
+        <span class="project-tag">Data Viz</span>
+        <a href="https://public.tableau.com/views/TableauProject1_17525916320900/Dashboard1" class="project-link" target="_blank">View Dashboard <span class="project-arrow">↗</span></a>
+      </div>
+
+      <div class="project-card" style="background: var(--bg); border-style: dashed;">
+        <span class="project-num" style="color: var(--rule);">02</span>
+        <div class="project-title" style="color: var(--subtle);">More Coming Soon</div>
+        <p class="project-desc" style="color: var(--rule);">New projects in data analytics, machine learning, and software development currently in progress.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section fade-up d4" id="skills">
+    <div class="section-label">Skills &amp; Certifications</div>
+    <div class="skills-layout">
+
+      <div>
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">R</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">SAS</span>
+          <span class="skill-pill">HTML</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-group-label">Tools</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Tableau</span>
+          <span class="skill-pill">MS SQL Server</span>
+          <span class="skill-pill">Excel</span>
+          <span class="skill-pill">Pivot Tables</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-group-label">Certifications</div>
+        <ul class="cert-list">
+          <li>MTA Python</li>
+          <li>Microsoft Office Specialist</li>
+          <li>Adobe Certified — Photoshop</li>
+          <li>Adobe Certified — Illustrator</li>
+          <li>Adobe Certified — Graphic Design</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="footer-section fade-up d4" id="contact">
+    <div>
+      <h2 class="footer-headline">Let's build<br>something <em>together.</em></h2>
+    </div>
+    <div class="contact-links">
+      <div class="contact-row">
+        <span class="contact-type">Email</span>
+        <a href="mailto:hmdave@unc.edu" class="contact-val">hmdave@unc.edu</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-type">Phone</span>
+        <span class="contact-val" style="border-color: transparent;">+1 919-656-1121</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-type">Location</span>
+        <span class="contact-val" style="border-color: transparent;">Chapel Hill, NC</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-type">Resume</span>
+        <a href="https://harshildave00.github.io/ResumeHarshil.docx%20-%20Google%20Docs.pdf" class="contact-val" target="_blank">Download PDF ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2026 Harshil Dave</span>
+    <span>Data Science · UNC Chapel Hill</span>
+  </footer>
+
+</div>
+</body>
+</html>
